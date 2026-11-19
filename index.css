@@ -1,0 +1,95 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    background-color: darkgoldenrod;
+}
+
+
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: F7F3F0;
+    padding: 16px;
+    width: 383px;
+    height: 538px;
+    gap: 24px;
+    
+}
+
+
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+.actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+
+}
+
+
+#input-el{
+width: 100;
+flex: 1;
+
+}
+
+
+#btn{
+    display: flex;
+    flex-direction: row;
+    padding: 8px 16px;
+    width: fit-content;
+    
+}
+
+#task-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    gap: 8px;
+}
+
+#list-item{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border: 1px solid #F0E8DF;
+    padding: 8px 16px;
+    width: 100%;
+    gap: 8px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #CBBBB6;
+    border-radius: 12px;
+    cursor: pointer;
+    background: white;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #3D272C;
+    
+}
