@@ -40,12 +40,12 @@ function rendertasks() {
     for (let i = 0; i < tasks.length; i++) {
         taskitem += `
 
-    <div id ="list-item">
-    <input type="checkbox" id="checkbox">
-    <p id="task-text">${tasks[i]}</p>
-    <span class="material-symbols-outlined" id="delete-btn">
-delete
-</span>
+     <div id="list-item" data-index="${i}">
+        <input type="checkbox" class="checkbox">
+        <p class="task-text">${tasks[i]}</p>
+        <span class="material-symbols-outlined delete-btn">
+            delete
+        </span>
     </div>
     `
     }
@@ -65,13 +65,14 @@ taskEl.addEventListener("change", function (event) {
 })
 
 
-
 taskEl.addEventListener("click", function (event) {
-    if (event.target.id === "delete-btn") {
-        event.target.parentElement.remove()
-       event.target.task.splice()
+    if (event.target.classList.contains("delete-btn")) {
+        let item = event.target.parentElement
+        let index = Number(item.dataset.index)
+
+        tasks.splice(index, 1)
+        localStorage.setItem("tasks", JSON.stringify(tasks))
+        rendertasks()
     }
-
-}) 
-
+})
 

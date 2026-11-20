@@ -39,6 +39,7 @@ body{
 }
 
 h1{
+    color: #3D272C;
     font-family: "IBM Plex Serif", serif;
 }
 .actions{
@@ -88,15 +89,19 @@ flex: 1;
     padding: 8px 16px;
     width: 100%;
     gap: 8px;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     border-radius: 4px ;
 }
 
-#task-text{
+.actions{
+    width: 100%;
     flex: 1;
 }
 
+.task-text{
+    flex: 1;
+}
 
 .material-symbols-outlined{
     opacity: 0;
