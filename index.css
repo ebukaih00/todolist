@@ -79,6 +79,22 @@ flex: 1;
     gap: 8px;
 }
 
+#task-text{
+    flex: 1;
+}
+
+
+.material-symbols-outlined{
+    opacity: 0;
+    display: none;
+    color: red;
+}
+
+
+#list-item:hover .material-symbols-outlined{
+    opacity: 1;
+}
+
 input[type="checkbox"] {
     appearance: none;
     width: 16px;

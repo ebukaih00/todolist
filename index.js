@@ -44,7 +44,10 @@ function rendertasks() {
 
     <div id ="list-item">
     <input type="checkbox" id="checkbox">
-    <p>${tasks[i]}</p>
+    <p id="task-text">${tasks[i]}</p>
+    <span class="material-symbols-outlined" id="delete-btn">
+delete
+</span>
     </div>
     `
     }
@@ -55,10 +58,22 @@ function rendertasks() {
 
 
 
-taskEl.addEventListener("change", function(event){
-    if (event.target.type==="checkbox"){
+taskEl.addEventListener("change", function (event) {
+    if (event.target.type === "checkbox") {
         let taskText = event.target.nextElementSibling
-taskText.classList.toggle("checked")
+        taskText.classList.toggle("checked")
     }
-    
+
 })
+
+
+
+taskEl.addEventListener("click", function (event) {
+    if (event.target.id === "delete-btn") {
+        event.target.parentElement.remove()
+       event.target.task.splice()
+    }
+
+})
+
+
