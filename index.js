@@ -5,8 +5,6 @@ let tasks = []
 let savedTasks = JSON.parse(localStorage.getItem("tasks"))
 
 
-// localStorage.clear()
-// console.log(localStorage)
 
 
 
@@ -74,6 +72,6 @@ taskEl.addEventListener("click", function (event) {
        event.target.task.splice()
     }
 
-})
+}) 
 
 
