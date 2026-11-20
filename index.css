@@ -84,12 +84,27 @@ input[type="checkbox"] {
     width: 16px;
     height: 16px;
     border: 1px solid #CBBBB6;
-    border-radius: 12px;
+    border-radius: 5px;
     cursor: pointer;
-    background: white;
+    position: relative;
 }
+
 
 input[type="checkbox"]:checked {
     background-color: #3D272C;
-    
+    border-color: #CBBBB6;
+}
+
+
+input[type="checkbox"]:checked::after {
+    content: "✓";
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    left: 3px;
+}
+
+.checked {
+    text-decoration: line-through;
 }

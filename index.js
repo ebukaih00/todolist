@@ -53,3 +53,12 @@ function rendertasks() {
 }
 
 
+
+
+taskEl.addEventListener("change", function(event){
+    if (event.target.type==="checkbox"){
+        let taskText = event.target.nextElementSibling
+taskText.classList.toggle("checked")
+    }
+    
+})
