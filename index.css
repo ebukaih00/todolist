@@ -143,3 +143,8 @@ input[type="checkbox"]:checked::after {
 .checked {
     text-decoration: line-through;
 }
+
+
+.message-el{
+    color: red;
+}
