@@ -3,7 +3,7 @@ let inputEl = document.getElementById("input-el")
 let taskEl = document.getElementById("task-container")
 let tasks = []
 let savedTasks = JSON.parse(localStorage.getItem("tasks"))
-
+let messageEl = document.getElementById("message-el")
 
 
 
@@ -14,7 +14,7 @@ btnEl.addEventListener("click", function () {
 
 
     if (inputEl.value.trim() === "") {
-
+        messageEl.textContent = "Enter a task!"
     }
     else {
         tasks.push(inputEl.value)
