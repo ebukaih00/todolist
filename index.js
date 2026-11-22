@@ -18,7 +18,7 @@ btnEl.addEventListener("click", function () {
     }
     else {
         tasks.push(inputEl.value)
-
+messageEl.textContent = ""
         localStorage.setItem("tasks", JSON.stringify(tasks))
         rendertasks()
     }
