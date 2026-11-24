@@ -14,7 +14,7 @@ btnEl.addEventListener("click", function () {
 
 
     if (inputEl.value.trim() === "") {
-        messageEl.textContent = "Enter a task!"
+        messageEl.textContent = "Please enter a task!"
     }
     else {
         tasks.push(inputEl.value)
